@@ -8,17 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		F20FCFA229513C6900C51517 /* UberAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FCFA129513C6900C51517 /* UberAppApp.swift */; };
-		F20FCFA429513C6900C51517 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FCFA329513C6900C51517 /* ContentView.swift */; };
 		F20FCFA629513C6A00C51517 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20FCFA529513C6A00C51517 /* Assets.xcassets */; };
 		F20FCFA929513C6A00C51517 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F20FCFA829513C6A00C51517 /* Preview Assets.xcassets */; };
+		F20FCFB729513CB500C51517 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FCFB629513CB500C51517 /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F20FCF9E29513C6900C51517 /* UberApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F20FCFA129513C6900C51517 /* UberAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberAppApp.swift; sourceTree = "<group>"; };
-		F20FCFA329513C6900C51517 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F20FCFA529513C6A00C51517 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F20FCFA829513C6A00C51517 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F20FCFB629513CB500C51517 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +51,11 @@
 		F20FCFA029513C6900C51517 /* UberApp */ = {
 			isa = PBXGroup;
 			children = (
-				F20FCFA129513C6900C51517 /* UberAppApp.swift */,
-				F20FCFA329513C6900C51517 /* ContentView.swift */,
+				F20FCFB329513C7F00C51517 /* App */,
+				F20FCFB229513C7E00C51517 /* Core */,
+				F20FCFB129513C7D00C51517 /* Extensions */,
+				F20FCFB029513C7D00C51517 /* Managers */,
+				F20FCFAF29513C7A00C51517 /* Models */,
 				F20FCFA529513C6A00C51517 /* Assets.xcassets */,
 				F20FCFA729513C6A00C51517 /* Preview Content */,
 			);
@@ -65,6 +68,59 @@
 				F20FCFA829513C6A00C51517 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F20FCFAF29513C7A00C51517 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F20FCFB029513C7D00C51517 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F20FCFB129513C7D00C51517 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F20FCFB229513C7E00C51517 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F20FCFB529513CA100C51517 /* ViewModel */,
+				F20FCFB429513CA000C51517 /* Views */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F20FCFB329513C7F00C51517 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F20FCFA129513C6900C51517 /* UberAppApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		F20FCFB429513CA000C51517 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F20FCFB629513CB500C51517 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F20FCFB529513CA100C51517 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +193,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F20FCFA429513C6900C51517 /* ContentView.swift in Sources */,
 				F20FCFA229513C6900C51517 /* UberAppApp.swift in Sources */,
+				F20FCFB729513CB500C51517 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
