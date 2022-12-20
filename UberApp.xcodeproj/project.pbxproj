@@ -17,6 +17,7 @@
 		F20FCFC32951443700C51517 /* MapViewActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FCFC22951443700C51517 /* MapViewActionButton.swift */; };
 		F20FCFC5295144F700C51517 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FCFC4295144F700C51517 /* LocationSearchView.swift */; };
 		F20FCFC72951469300C51517 /* LocationSearchResultsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FCFC62951469300C51517 /* LocationSearchResultsCell.swift */; };
+		F20FCFC929520C1400C51517 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20FCFC829520C1400C51517 /* LocationSearchViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		F20FCFC22951443700C51517 /* MapViewActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewActionButton.swift; sourceTree = "<group>"; };
 		F20FCFC4295144F700C51517 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		F20FCFC62951469300C51517 /* LocationSearchResultsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultsCell.swift; sourceTree = "<group>"; };
+		F20FCFC829520C1400C51517 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +161,7 @@
 		F20FCFBE2951432300C51517 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F20FCFC829520C1400C51517 /* LocationSearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20FCFC929520C1400C51517 /* LocationSearchViewModel.swift in Sources */,
 				F20FCFC5295144F700C51517 /* LocationSearchView.swift in Sources */,
 				F20FCFBB29513E9C00C51517 /* LocationManager.swift in Sources */,
 				F20FCFC32951443700C51517 /* MapViewActionButton.swift in Sources */,
