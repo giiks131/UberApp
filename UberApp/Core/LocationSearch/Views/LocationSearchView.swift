@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LocationSearchView: View {
     @State private var startLocationText = ""
-    @Binding var showLocationSearchView: Bool
+    @Binding var mapState: MapViewState
     @EnvironmentObject var viewModel: LocationSearchViewModel
     
     var body: some View {
@@ -34,13 +34,25 @@ struct LocationSearchView: View {
                 VStack {
                     TextField("Current location", text: $startLocationText)
                         .frame(height: 32)
+//                        .background(Color(.systemGroupedBackground))
+                        .padding([.trailing, .leading], 5)
+                        .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color.secondary.opacity(0.5))
+//                            .background(Color(.systemGroupedBackground))
+                        )
                         .background(Color(.systemGroupedBackground))
-                        .padding(.trailing)
                     
                     TextField("Where to?", text: $viewModel.queryFragment)
                         .frame(height: 32)
+//                        .background(Color(.systemGray4))
+                        .padding([.trailing, .leading], 5)
+                        .overlay(
+                        RoundedRectangle(cornerRadius: 6)
+                            .stroke(Color.secondary.opacity(0.5))
+//                            .background(Color(.systemGroupedBackground))
+                        )
                         .background(Color(.systemGray4))
-                        .padding(.trailing)
                 }
             }
             .padding(.horizontal)
@@ -56,8 +68,10 @@ struct LocationSearchView: View {
                         
                         LocationSearchResultsCell(title: result.title, subTitle: result.subtitle)
                             .onTapGesture {
-                                viewModel.selectLocation(result)
-                                showLocationSearchView.toggle()
+                                withAnimation(.spring()) {
+                                    viewModel.selectLocation(result)
+                                    mapState = .locationSelected
+                                }
                             }
                     }
                 }
@@ -67,8 +81,8 @@ struct LocationSearchView: View {
     }
 }
 
-struct LocationSearchView_Previews: PreviewProvider {
-    static var previews: some View {
-        LocationSearchView(showLocationSearchView: .constant(false))
-    }
-}
+//struct LocationSearchView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LocationSearchView(mapState: .constant(.searchingForLocation))
+//    }
+//}
