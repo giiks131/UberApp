@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State private var mapState = MapViewState.noInput
+//    @State var showView = false
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -37,6 +38,12 @@ struct HomeView: View {
                 RideRequestView()
                     .transition(.move(edge: .bottom))
             }
+            
+//            if mapState == .locationSelected {
+//                RideRequestView(showView: $showView)
+//                    .transition(.move(edge: .bottom))
+//                    .zIndex(1)
+//            }
         }
         .edgesIgnoringSafeArea(.bottom)
     }
