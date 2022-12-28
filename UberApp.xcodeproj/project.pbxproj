@@ -22,6 +22,7 @@
 		F24F68A62953C80A0070746D /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24F68A52953C80A0070746D /* RideRequestView.swift */; };
 		F24F68AA2953D7B50070746D /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24F68A92953D7B50070746D /* RideType.swift */; };
 		F2C044F8295CE56900F85566 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C044F7295CE56900F85566 /* Double.swift */; };
+		F2C044FA295CE84900F85566 /* UberLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C044F9295CE84900F85566 /* UberLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		F24F68A52953C80A0070746D /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		F24F68A92953D7B50070746D /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
 		F2C044F7295CE56900F85566 /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		F2C044F9295CE84900F85566 /* UberLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			children = (
 				F20FCFCA2953498800C51517 /* MapViewState.swift */,
 				F24F68A92953D7B50070746D /* RideType.swift */,
+				F2C044F9295CE84900F85566 /* UberLocation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				F20FCFC72951469300C51517 /* LocationSearchResultsCell.swift in Sources */,
 				F20FCFA229513C6900C51517 /* UberAppApp.swift in Sources */,
 				F20FCFB929513D3900C51517 /* UberMapViewRepresentable.swift in Sources */,
+				F2C044FA295CE84900F85566 /* UberLocation.swift in Sources */,
 				F20FCFB729513CB500C51517 /* HomeView.swift in Sources */,
 				F20FCFC12951433700C51517 /* LocationSearchActivationView.swift in Sources */,
 				F24F68AA2953D7B50070746D /* RideType.swift in Sources */,
