@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RideRequestView: View {
     @State private var selectedRideType: RideType = .uberX
+    @EnvironmentObject var locationViewModel: LocationSearchViewModel
 //    @Binding var showView: Bool
     
     var body: some View {
@@ -44,20 +45,22 @@ struct RideRequestView: View {
                         
                         Spacer ()
                         
-                        Text("1:30 PM")
+                        Text(locationViewModel.pickupTime ?? "")
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(.gray)
                     }
                     .padding(.bottom, 10)
                     
                     HStack {
-                        Text("Kremlin, Putin's grave")
-                            .font(.system(size: 16, weight: .semibold))
-//                            .foregroundColor(.gray)
+                        if let location = locationViewModel.selectedUberLocation {
+                            Text(location.title)
+                                .font(.system(size: 16, weight: .semibold))
+    //                            .foregroundColor(.gray)
+                        }
                         
                         Spacer ()
                         
-                        Text("1:45 PM")
+                        Text(locationViewModel.dropOffTime ?? "")
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(.gray)
                     }
@@ -88,14 +91,14 @@ struct RideRequestView: View {
                                 Text(rideType.description)
                                     .font(.system(size: 14, weight: .semibold))
                                 
-                                Text("$22.19")
+                                Text(locationViewModel.computeRidePrice(forType: rideType).toCurrency())
                                     .font(.system(size: 14, weight: .semibold))
                             }
                             .padding()
                         }
                         .frame(width: 112, height: 140)
-                        .foregroundColor(rideType == selectedRideType ? .white : .black)
-                        .background(Color(rideType == selectedRideType ? .systemBlue : .systemGroupedBackground))
+                        .foregroundColor(rideType == selectedRideType ? .white : Color.theme.primaryTextColor)
+                        .background(rideType == selectedRideType ? .blue : Color.theme.secondaryBackgroundColor)
                         .scaleEffect(rideType == selectedRideType ? 1.2 : 1.0)
                         .cornerRadius(10)
                         .onTapGesture {
@@ -132,7 +135,7 @@ struct RideRequestView: View {
                     .padding()
             }
             .frame(height: 50)
-            .background(Color(.systemGroupedBackground))
+            .background(Color.theme.secondaryBackgroundColor)
             .cornerRadius(10)
             .padding(.horizontal)
 //            .padding(.top)
@@ -151,7 +154,7 @@ struct RideRequestView: View {
 
         }
         .padding(.bottom, 26)
-        .background(.white)
+        .background(Color.theme.backgroundColor)
         .cornerRadius(16)
     }
 }
